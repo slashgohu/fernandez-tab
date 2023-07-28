@@ -282,10 +282,16 @@ body    {
         
   
 /* mobile screen */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1285px) {
     .searchbar, .all-button {
       zoom: 70%;
       margin: 200px 5px;
+    }
+  }
+
+@media screen and (max-width: 1285px) {
+    .all-button {
+     top: 640px;
     }
   }
 
