@@ -284,7 +284,7 @@ body    {
 /* mobile screen */
 @media screen and (max-width: 1280px) {
     .searchbar, .all-button {
-      zoom: 80%;
+      zoom: 70%;
       margin: 200px 5px;
     }
   }
