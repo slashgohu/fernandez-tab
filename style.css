@@ -1,0 +1,330 @@
+*   {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root   {
+    --gradient1: linear-gradient(75deg, #10002B, #240046, #3C096C, #5A189A, #7B2CBF, #9D4EDD, #C77DFF, #E0AAFF);
+    --bgcolor: rgba(217, 217, 217, 0.15);
+    --fontcolor: rgba(240, 228, 228, 0.69);
+    --pastel-purple: #B388EB;
+    --pastel-pink: #F7AEF8;
+    --pastel-pinklight: #FDC5F5;
+}
+
+body    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    background-image: var(--gradient1);
+    background-size: 400%;
+    animation: bganimation 32s infinite alternate;
+}
+
+/* fernandez */
+
+
+.fernandez {
+    position: absolute;
+    top: 50px;
+    width: 103px;
+    height: 88px;
+    background-image: url(https://cdn.discordapp.com/attachments/1091955549840605257/1128549264507801600/naguento_mais.png);
+    background-repeat: no-repeat;
+    border-color: #c86bfa;
+    animation: breathe-and-jump 3s infinite;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+.fernandez::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 3px);
+    height: calc(100% + 2px);
+    opacity: 0;
+    transition: 0.3s linear all;
+  }
+  
+  .fernandez > .eyes {
+    position: relative;
+  }
+  .fernandez > .eyes > .eye {
+    position: absolute;
+    top: 25px;
+    /* width: 20px;
+      height: 25px; */
+    width: 15px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #c86bfa;
+    box-shadow: 0 0 7px #c86bfa;
+    animation: blink 5s linear infinite;
+  }
+  .fernandez > .eyes > .eye.left {
+    left: 25%;
+  }
+  .fernandez > .eyes > .eye.right {
+    right: 25%;
+  }
+
+
+
+.container  {
+    width: 100%;
+    height: 98vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar  {
+    width: 100%;
+    max-width: 600px;
+    font-weight: 200;
+    position: relative;
+    /* top: -225px; */
+    background: var(--bgcolor);
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.searchbar input    {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: var(--fontcolor);
+}
+::placeholder   {
+    color: var(--fontcolor);
+}
+
+.searchbar button   {
+    border: 0;
+    color: var(--fontcolor);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.all-button {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    position: fixed;
+    top: 700px;
+    background: var(--bgcolor);
+    color: var(--fontcolor);
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--fontcolor);
+    padding: 24px 20px;
+    margin: 12px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* google apps */
+.dropup-g {
+    position: relative;
+    display: inline-block;
+}
+
+.dropupg-content {
+    display: none;
+    position: absolute;
+    right: -15px;
+    bottom: 50px;
+    font-size: 18px;
+    background-color: var(--pastel-pink);
+    border-radius: 13px;
+    min-width: 160px;
+    -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
+    box-shadow: 0 0 0 5px var(--pastel-purple);
+    z-index: 1;
+}
+
+.dropupg-content a {
+    color: var(--fontcolor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropupg-content a:hover {
+    background-color: #5A189A;
+    border-radius: 13px;
+}
+
+.dropup-g:hover .dropupg-content {
+    display: block;
+}
+
+/* funny apps */
+.dropup-f {
+    position: relative;
+    display: inline-block;
+}
+
+.dropupf-content {
+    display: none;
+    position: absolute;
+    right: -18px;
+    bottom: 50px;
+    font-size: 18px;
+    background-color: var(--pastel-pink);
+    border-radius: 13px;
+    min-width: 160px;
+    -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
+    box-shadow: 0 0 0 5px var(--pastel-purple);
+    z-index: 1;
+}
+
+.dropupf-content a {
+    color: var(--fontcolor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropupf-content a:hover {
+    background-color: #5A189A;
+    border-radius: 13px;
+}
+
+.dropup-f:hover .dropupf-content {
+    display: block;
+}
+
+
+/* animacao btns */
+.dropbtn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.dropbtn span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--pastel-pink);
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.dropbtn span:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.dropbtn:hover {
+    -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
+            box-shadow: 0 0 0 5px var(--pastel-purple);
+}
+
+.dropbtn:active {
+    scale: 0.95;
+}
+
+.dropbtn:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+}
+
+.all-button:hover {
+    -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
+            box-shadow: 0 0 0 5px var(--pastel-purple);
+    -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.searchbar:hover    {
+    -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
+            box-shadow: 0 0 0 5px var(--pastel-purple);
+    -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+        
+  
+/* mobile screen */
+@media screen and (max-width: 1280px) {
+    .searchbar, .all-button {
+      zoom: 80%;
+      margin: 200px 5px;
+    }
+  }
+
+
+/* Animation bg */
+@keyframes  bganimation {
+    0%{background-position:left;}
+    100%{background-position: right;}
+}
+
+/* Animation fernandez */
+@keyframes breathe-and-jump {
+    0%,
+    40%,
+    80%,
+    100% {
+      height: 95px;
+      transform: translateY(0);
+    }
+    20%,
+    60%,
+    70%,
+    90% {
+      height: 100px;
+      transform: translateY(-5px);
+    }
+    85% {
+      height: 85px;
+      transform: translateY(-20px);
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+      transform: scale(1, 0.05);
+    }
+    5%,
+    95% {
+      transform: scale(1, 1);
+    }
+}
