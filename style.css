@@ -154,7 +154,7 @@ body    {
     right: -15px;
     bottom: 50px;
     font-size: 18px;
-    background-color: var(--pastel-pink);
+    background-color: #5A189A;
     border-radius: 13px;
     min-width: 160px;
     -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
@@ -170,7 +170,7 @@ body    {
 }
 
 .dropupg-content a:hover {
-    background-color: #5A189A;
+    background-color: var(--pastel-pink);
     border-radius: 13px;
 }
 
@@ -190,7 +190,7 @@ body    {
     right: -18px;
     bottom: 50px;
     font-size: 18px;
-    background-color: var(--pastel-pink);
+    background-color: #5A189A;
     border-radius: 13px;
     min-width: 160px;
     -webkit-box-shadow: 0 0 0 5px var(--pastel-purple);
@@ -206,7 +206,7 @@ body    {
 }
 
 .dropupf-content a:hover {
-    background-color: #5A189A;
+    background-color: var(--pastel-pink);
     border-radius: 13px;
 }
 
