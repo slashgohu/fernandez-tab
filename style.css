@@ -287,13 +287,29 @@ body    {
       zoom: 70%;
       margin: 200px 5px;
     }
-  }
+}
 
 @media screen and (max-width: 1285px) {
     .all-button {
      top: 640px;
     }
-  }
+}
+
+
+/* 1440p Desktop */
+
+@media screen and (min-width: 1950px) {
+    .searchbar, .all-button {
+      zoom: 120%;
+      margin: 200px 5px;
+    }
+}
+
+/* @media screen and (min-width: 1950px) {
+    .all-button {
+     top: 1200px;
+    }
+} */
 
 
 /* Animation bg */
